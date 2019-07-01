@@ -1,6 +1,6 @@
 {
   "name": "taro-navbar",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "taro组件封装的自定义导航栏  可自定义返回事件 支持异形屏 支持滚动渐变",
   "main": "app.js",
   "scripts": {
