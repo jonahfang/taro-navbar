@@ -5,6 +5,7 @@ import './index.scss'
 import {
     Back_black,
     Back_white,
+    Close_white,
 } from './icon/index'
 
 export default class Index extends Component {
@@ -33,6 +34,7 @@ export default class Index extends Component {
     fixedtop: true, // 是否固定在顶部
     toBack: true, // 是否自动返回上一页
     showBack: true, // 是否显示返回按钮
+    showClose: false, // 是否显示关闭按钮
     title: '标题',
     protectInaver: true,
     protectCapsule: true,
@@ -44,7 +46,6 @@ export default class Index extends Component {
         statusbarh: 20,
         startpage: '/pages/flash/index',
         goBackImage:Back_black,
-
         isIOS: true,
     }
 
@@ -123,6 +124,9 @@ export default class Index extends Component {
                     <View className='left' onClick={this.handlergoback.bind(this)}>
                         {
                             this.props.showBack && <Image class='image' mode='aspectFit' src={this.state.goBackImage}></Image>
+                        }
+                        {
+                            this.props.showClose && <Image class='image' mode='aspectFit' src={Close_white}></Image>
                         }
                     </View>
                     <View style={`color:${this.props.colorTheme}`} className={classNames('center', { 'ioscenter': this.state.isIOS })}>
